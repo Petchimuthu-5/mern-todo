@@ -1,0 +1,218 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+}
+
+/* Authentication Container */
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #f3f3f3;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container input {
+  padding: 10px;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  width: 90%;
+}
+
+.auth-container .button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.auth-container button {
+  padding: 10px;
+  border: none;
+  background: #667eea;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+  width: 48%;
+}
+
+.auth-container button:hover {
+  background: #5563c1;
+}
+
+.auth-container .register {
+  background: #28a745;
+}
+
+.auth-container .register:hover {
+  background: #218838;
+}
+
+/* Logout Button */
+.logout {
+  background-color: #dc3545;
+}
+
+.logout:hover {
+  background-color: #b52b3a;
+}
+
+/* Task List */
+.task-input-container input {
+  width: 85%;
+  padding: 10px;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.task-input-container input:focus {
+  border-color: #5563c1;
+  outline: none;
+}
+
+.add-task-container button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #667eea;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.add-task-container button:hover {
+  background: #5563c1;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: #8eb8ff;  /* Light blue */
+  margin-top: 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+li:hover {
+  transform: scale(1.03);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+}
+
+button.delete {
+  background-color: #dc3545;
+  transition: 0.3s;
+}
+
+button.delete:hover {
+  background-color: #b52b3a;
+}
+
+/* Mobile Responsive */
+@media (max-width: 400px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .auth-container input, .task-input-container input {
+    width: 100%;
+  }
+
+  .auth-container .button-group {
+    flex-direction: column;
+  }
+
+  .auth-container button {
+    width: 100%;
+  }
+}
+/* Logout Button Container */
+.logout-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px; /* Space between Add button and Logout */
+}
+
+/* Logout Button */
+.logout {
+  padding: 10px;
+  border: none;
+  background-color: #dc3545;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+  width: 40%;
+}
+
+.logout:hover {
+  background-color: #b52b3a;
+}
+
+/* Add Task Button */
+.add-task-container {
+  margin-bottom: 15px; /* Space between Add button and Logout */
+}
+.task-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;  /* Adds space between input and add button */
+  align-items: center;
+}
+
+.task-input-container input {
+  width: 85%;
+  padding: 10px;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.add-task-container {
+  margin-top: 10px; /* Space between the input and add button */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.add-task-container button {
+  width: 100px;
+  padding: 10px;
+  border: none;
+  background: #667eea;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.add-task-container button:hover {
+  background: #5563c1;
+}
