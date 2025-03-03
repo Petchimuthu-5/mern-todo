@@ -13,7 +13,7 @@ const App = () => {
   useEffect(() => {
     if (token) {
       axios
-        .get("https://mern-todo-5-2nol.onrender.com/api/tasks", {
+        .get("http://localhost:5000/api/tasks", {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((res) => setTasks(res.data))
@@ -26,7 +26,7 @@ const App = () => {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post("https://mern-todo-ml9n.onrender.com/api/login", {
+      const res = await axios.post("http://localhost:5000/api/login", {
         username,
         password,
       });
@@ -39,7 +39,7 @@ const App = () => {
   };
 
   const handleRegister = async () => {
-    await axios.post("https://mern-todo-ml9n.onrender.com/api/register", {
+    await axios.post("http://localhost:5000/api/register", {
       username,
       password,
     });
@@ -49,7 +49,7 @@ const App = () => {
   const addTask = () => {
     axios
       .post(
-        "https://mern-todo-ml9n.onrender.com/api/tasks",
+        "http://localhost:5000/api/tasks",
         { title: task },
         { headers: { Authorization: `Bearer ${token}` } }
       )
@@ -59,7 +59,7 @@ const App = () => {
 
   const deleteTask = (id) => {
     axios
-      .delete(`https://mern-todo-ml9n.onrender.com/api/tasks/${id}`, {
+      .delete(`http://localhost:5000/api/tasks/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then(() => {
