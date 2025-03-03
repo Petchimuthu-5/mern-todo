@@ -7,7 +7,10 @@ require("dotenv").config();
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+
+app.use(cors({
+  origin: "https://mern-todo-5-2nol.onrender.com"
+}));
 
 mongoose.connect("mongodb+srv://petchimuthumug22it:petchi2004@cluster0.noovs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
   useNewUrlParser: true,
